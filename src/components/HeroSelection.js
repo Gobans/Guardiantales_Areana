@@ -1,18 +1,24 @@
 import { Select } from "antd";
+import { heroesName } from "../Info/heroes";
 
 const { Option } = Select;
 
 const children = [];
-const heroes = { 0: "none", 1: "dango", 2: "slot", 3: "john" };
 
-for (let i = 0; i < 4; i++) {
-  children.push(<Option key={i}>{heroes[i]}</Option>);
+let defaultHero = [];
+
+for (let j = 0; j < Object.keys(heroesName).length; j++) {
+  defaultHero.push(`${j}`);
+}
+
+for (let i = 0; i < Object.keys(heroesName).length; i++) {
+  children.push(<Option key={i}>{heroesName[i]}</Option>);
 }
 
 const HeroSelection = (props) => {
   function handleChange(value) {
     console.log(`selected ${value}`);
-    props.setForbiddenIndex(value);
+    props.setAvailableIndex(value);
   }
   return (
     <>
@@ -21,7 +27,7 @@ const HeroSelection = (props) => {
         allowClear
         style={{ width: "100%" }}
         placeholder="Please select"
-        defaultValue={["0", "1", "2", "3"]}
+        defaultValue={defaultHero}
         onChange={handleChange}
       >
         {children}

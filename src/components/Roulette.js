@@ -5,6 +5,8 @@ import "./roulette.css";
 import HeroCard from "./HeroCard";
 import HeroSettingModal from "./HeroSettingModal";
 import HeroSelection from "./HeroSelection";
+import HeroOption from "./HeroOption";
+import { heroesInfo } from "../Info/heroes";
 
 function shuffle(array) {
   var currentIndex = array.length,
@@ -25,24 +27,71 @@ function shuffle(array) {
 
   return array;
 }
+let defaultIndex = [];
+
+for (let j = 0; j < Object.keys(heroesInfo).length; j++) {
+  defaultIndex.push(`${j}`);
+}
+
+let defaultOption = [
+  "3성",
+  "2성",
+  "화속성",
+  "수속성",
+  "지속성",
+  "광속성",
+  "암속성",
+  "무속성",
+  "1성",
+];
 
 function Roulette() {
-  const [forbiddenIndex, setForbiddenIndex] = useState(["0", "1", "2", "3"]);
+  const [availableIndex, setAvailableIndex] = useState(defaultIndex);
+  const [option, setOption] = useState(defaultOption);
 
   const [card1, setCard1] = useState(0);
-  const [card2, setCard2] = useState(0);
-  const [card3, setCard3] = useState(0);
-
-  let name = { 0: "none", 1: "dango", 2: "slot", 3: "john" };
+  const [card2, setCard2] = useState(1);
+  const [card3, setCard3] = useState(2);
 
   const randomChange = () => {
     let array = [];
+    console.log(option);
 
-    for (let i = 0; i < forbiddenIndex.length; i++) {
-      array.push(parseInt(forbiddenIndex[i]));
+    let options = {
+      "3성": false,
+      "2성": false,
+      "1성": false,
+      화속성: false,
+      수속성: false,
+      목속성: false,
+      암속성: false,
+      광속성: false,
+      무속성: false,
+    };
+
+    for (let j = 0; j < option.length; j++) {
+      options[option[j]] = true;
+    }
+
+    console.log(options);
+
+    for (let i = 0; i < availableIndex.length; i++) {
+      if (
+        options[heroesInfo[parseInt(availableIndex[i])].star] &&
+        options[heroesInfo[parseInt(availableIndex[i])].element]
+      ) {
+        array.push(parseInt(availableIndex[i]));
+      }
+      console.log(availableIndex[i]);
     }
 
     console.log(array);
+
+    if (array.length < 3) {
+      while (array.length < 3) {
+        array.push(Object.keys(heroesInfo).length - 1);
+      }
+    }
 
     array = shuffle(array);
     console.log(array);
@@ -56,14 +105,14 @@ function Roulette() {
     <>
       <Divider orientation="center">여신의 신탁</Divider>
       <Row justify="center">
-        <Col span={3}>
-          <HeroCard heroName={name[card1]} />
+        <Col span={5}>
+          <HeroCard heroName={heroesInfo[card1].name} />
         </Col>
-        <Col span={3}>
-          <HeroCard heroName={name[card2]} />
+        <Col span={5}>
+          <HeroCard heroName={heroesInfo[card2].name} />
         </Col>
-        <Col span={3}>
-          <HeroCard heroName={name[card3]} />
+        <Col span={5}>
+          <HeroCard heroName={heroesInfo[card3].name} />
         </Col>
       </Row>
       <br />
@@ -75,15 +124,27 @@ function Roulette() {
             randomChange();
           }}
         >
-          Primary Button
+          <div>
+            <img
+              src="\img\pudding.png"
+              alt="pudding"
+              width="30px"
+              height="30px"
+            ></img>
+          </div>
         </Button>
       </Row>
       <br />
       <br />
 
+      <HeroOption setOption={setOption} option={option} />
+
+      <br />
+      <br />
+
       <HeroSelection
-        setForbiddenIndex={setForbiddenIndex}
-        forbiddenIndex={forbiddenIndex}
+        setAvailableIndex={setAvailableIndex}
+        availableIndex={availableIndex}
       />
     </>
   );
