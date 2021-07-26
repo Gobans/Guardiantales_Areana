@@ -49,9 +49,9 @@ function Roulette() {
   const [availableIndex, setAvailableIndex] = useState(defaultIndex);
   const [option, setOption] = useState(defaultOption);
 
-  const [card1, setCard1] = useState(0);
-  const [card2, setCard2] = useState(1);
-  const [card3, setCard3] = useState(2);
+  const [card1, setCard1] = useState(31);
+  const [card2, setCard2] = useState(0);
+  const [card3, setCard3] = useState(20);
 
   const randomChange = () => {
     let array = [];
@@ -119,7 +119,6 @@ function Roulette() {
 
       <Row justify="center">
         <Button
-          type="primary"
           onClick={() => {
             randomChange();
           }}
