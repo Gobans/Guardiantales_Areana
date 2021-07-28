@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Guardiantales_Areana/static/css/main.ad67b6ca.chunk.css",
+    "main.js": "/Guardiantales_Areana/static/js/main.0223fcea.chunk.js",
+    "main.js.map": "/Guardiantales_Areana/static/js/main.0223fcea.chunk.js.map",
+    "runtime-main.js": "/Guardiantales_Areana/static/js/runtime-main.6721c6c9.js",
+    "runtime-main.js.map": "/Guardiantales_Areana/static/js/runtime-main.6721c6c9.js.map",
+    "static/css/2.dbb450e1.chunk.css": "/Guardiantales_Areana/static/css/2.dbb450e1.chunk.css",
+    "static/js/2.d6dcc69e.chunk.js": "/Guardiantales_Areana/static/js/2.d6dcc69e.chunk.js",
+    "static/js/2.d6dcc69e.chunk.js.map": "/Guardiantales_Areana/static/js/2.d6dcc69e.chunk.js.map",
+    "static/js/3.f037ff04.chunk.js": "/Guardiantales_Areana/static/js/3.f037ff04.chunk.js",
+    "static/js/3.f037ff04.chunk.js.map": "/Guardiantales_Areana/static/js/3.f037ff04.chunk.js.map",
+    "index.html": "/Guardiantales_Areana/index.html",
+    "static/css/2.dbb450e1.chunk.css.map": "/Guardiantales_Areana/static/css/2.dbb450e1.chunk.css.map",
+    "static/css/main.ad67b6ca.chunk.css.map": "/Guardiantales_Areana/static/css/main.ad67b6ca.chunk.css.map",
+    "static/js/2.d6dcc69e.chunk.js.LICENSE.txt": "/Guardiantales_Areana/static/js/2.d6dcc69e.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/Guardiantales_Areana/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6721c6c9.js",
+    "static/css/2.dbb450e1.chunk.css",
+    "static/js/2.d6dcc69e.chunk.js",
+    "static/css/main.ad67b6ca.chunk.css",
+    "static/js/main.0223fcea.chunk.js"
+  ]
+}
