@@ -36,7 +36,7 @@ ReactDOM.render(
         </div>
       </Content>
       <Footer style={{ textAlign: "center" }}>
-        Ant Design ©2018 Created by Ant UED
+        문의&건의: thznfl44@naver.com
       </Footer>
     </Layout>
   </React.StrictMode>,

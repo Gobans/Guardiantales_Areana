@@ -125,7 +125,7 @@ function Roulette() {
         >
           <div>
             <img
-              src="\img\pudding.png"
+              src="img\pudding.png"
               alt="pudding"
               width="30px"
               height="30px"
