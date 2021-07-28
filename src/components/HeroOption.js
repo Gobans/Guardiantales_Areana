@@ -61,13 +61,13 @@ const HeroOption = (props) => {
 
       <Mobile>
         <Row>
-          <Col span={4}>
+          <Col span={6}>
             <Checkbox value="3성">3성</Checkbox>
           </Col>
-          <Col span={4}>
+          <Col span={6}>
             <Checkbox value="2성">2성</Checkbox>
           </Col>
-          <Col span={4}>
+          <Col span={6}>
             <Checkbox value="1성">1성</Checkbox>
           </Col>
         </Row>
