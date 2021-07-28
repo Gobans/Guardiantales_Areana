@@ -117,9 +117,11 @@ function Roulette() {
           </Col>
           <Col span={5}>
             <HeroCard heroName={heroesInfo[card2].name} />
+            {/* <Divider style={{ height:  }} type="vertical"></Divider> */}
           </Col>
           <Col span={5}>
             <HeroCard heroName={heroesInfo[card3].name} />
+            {/* <Divider type="vertical"></Divider> */}
           </Col>
         </Row>
         <br />
@@ -144,20 +146,18 @@ function Roulette() {
       </PC>
 
       <Mobile>
-        <Divider orientation="center">여신의 신탁</Divider>
-
-        <HeroCardMobile heroName={heroesInfo[card1].name} />
-
-        <Divider orientation="center" style={{ width: 1 }}></Divider>
-
-        <HeroCardMobile heroName={heroesInfo[card2].name} />
-
-        <WhiteSpace size="lg" />
-        <Divider orientation="center"></Divider>
-
-        <HeroCardMobile heroName={heroesInfo[card3].name} />
-
-        <Divider orientation="center"></Divider>
+        <Divider orientation="vertical">여신의 신탁</Divider>
+        <Row justify="center">
+          <Col span={8}>
+            <HeroCard heroName={heroesInfo[card1].name} />
+          </Col>
+          <Col span={8}>
+            <HeroCard heroName={heroesInfo[card2].name} />
+          </Col>
+          <Col span={8}>
+            <HeroCard heroName={heroesInfo[card3].name} />
+          </Col>
+        </Row>
 
         <br />
 
