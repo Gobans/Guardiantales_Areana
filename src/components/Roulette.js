@@ -1,10 +1,16 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Row, Col, Divider, Button } from "antd";
+import { Flex, WhiteSpace } from "antd-mobile";
+
 import "./roulette.css";
+import { Mobile, PC } from "../Info/MediaQuery";
 
 import HeroCard from "./HeroCard";
-import HeroSettingModal from "./HeroSettingModal";
+import HeroCardMobile from "./HeroCardMobile";
+
 import HeroSelection from "./HeroSelection";
+import HeroSelectionMobile from "./HeroSelectionMobile";
+
 import HeroOption from "./HeroOption";
 import { heroesInfo } from "../Info/heroes";
 
@@ -103,48 +109,100 @@ function Roulette() {
 
   return (
     <>
-      <Divider orientation="center">여신의 신탁</Divider>
-      <Row justify="center">
-        <Col span={5}>
-          <HeroCard heroName={heroesInfo[card1].name} />
-        </Col>
-        <Col span={5}>
-          <HeroCard heroName={heroesInfo[card2].name} />
-        </Col>
-        <Col span={5}>
-          <HeroCard heroName={heroesInfo[card3].name} />
-        </Col>
-      </Row>
-      <br />
+      <PC>
+        <Divider orientation="center">여신의 신탁</Divider>
+        <Row justify="center">
+          <Col span={5}>
+            <HeroCard heroName={heroesInfo[card1].name} />
+          </Col>
+          <Col span={5}>
+            <HeroCard heroName={heroesInfo[card2].name} />
+          </Col>
+          <Col span={5}>
+            <HeroCard heroName={heroesInfo[card3].name} />
+          </Col>
+        </Row>
+        <br />
+        <Row justify="center">
+          <Button
+            onClick={() => {
+              randomChange();
+            }}
+          >
+            <div>
+              <img
+                src="img\pudding.png"
+                alt="pudding"
+                width="30px"
+                height="30px"
+              ></img>
+            </div>
+          </Button>
+        </Row>
+        <br />
+        <br />
+      </PC>
 
-      <Row justify="center">
-        <Button
-          onClick={() => {
-            randomChange();
-          }}
-        >
-          <div>
-            <img
-              src="img\pudding.png"
-              alt="pudding"
-              width="30px"
-              height="30px"
-            ></img>
-          </div>
-        </Button>
-      </Row>
-      <br />
-      <br />
+      <Mobile>
+        <Divider orientation="left">여신의 신탁</Divider>
+        <Flex>
+          <Flex.Item>
+            <HeroCardMobile heroName={heroesInfo[card1].name} />
+          </Flex.Item>
+        </Flex>
+        <WhiteSpace size="lg" />
+        <Flex>
+          <Flex.Item>
+            <HeroCardMobile heroName={heroesInfo[card2].name} />
+          </Flex.Item>
+        </Flex>
+        <WhiteSpace size="lg" />
+        <Flex>
+          <Flex.Item>
+            <HeroCardMobile heroName={heroesInfo[card3].name} />
+          </Flex.Item>
+        </Flex>
+
+        <br />
+
+        <Row justify="left">
+          <Button
+            onClick={() => {
+              randomChange();
+            }}
+          >
+            <div>
+              <img
+                src="img\pudding.png"
+                alt="pudding"
+                width="30px"
+                height="30px"
+              ></img>
+            </div>
+          </Button>
+        </Row>
+        <br />
+        <br />
+      </Mobile>
 
       <HeroOption setOption={setOption} option={option} />
 
       <br />
       <br />
 
-      <HeroSelection
-        setAvailableIndex={setAvailableIndex}
-        availableIndex={availableIndex}
-      />
+      <PC>
+        <HeroSelection
+          setAvailableIndex={setAvailableIndex}
+          availableIndex={availableIndex}
+        />
+      </PC>
+
+      <Mobile>
+        <HeroSelection
+          setAvailableIndex={setAvailableIndex}
+          availableIndex={availableIndex}
+        />
+      </Mobile>
     </>
   );
 }
