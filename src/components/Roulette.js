@@ -144,28 +144,24 @@ function Roulette() {
       </PC>
 
       <Mobile>
-        <Divider orientation="left">여신의 신탁</Divider>
-        <Flex>
-          <Flex.Item>
-            <HeroCardMobile heroName={heroesInfo[card1].name} />
-          </Flex.Item>
-        </Flex>
+        <Divider orientation="center">여신의 신탁</Divider>
+
+        <HeroCardMobile heroName={heroesInfo[card1].name} />
+
+        <Divider orientation="center" style={{ width: 1 }}></Divider>
+
+        <HeroCardMobile heroName={heroesInfo[card2].name} />
+
         <WhiteSpace size="lg" />
-        <Flex>
-          <Flex.Item>
-            <HeroCardMobile heroName={heroesInfo[card2].name} />
-          </Flex.Item>
-        </Flex>
-        <WhiteSpace size="lg" />
-        <Flex>
-          <Flex.Item>
-            <HeroCardMobile heroName={heroesInfo[card3].name} />
-          </Flex.Item>
-        </Flex>
+        <Divider orientation="center"></Divider>
+
+        <HeroCardMobile heroName={heroesInfo[card3].name} />
+
+        <Divider orientation="center"></Divider>
 
         <br />
 
-        <Row justify="left">
+        <Row justify="center">
           <Button
             onClick={() => {
               randomChange();

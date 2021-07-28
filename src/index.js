@@ -48,8 +48,10 @@ ReactDOM.render(
           <Menu.Item key="3">nav 3</Menu.Item> */}
           </Menu>
         </Header>
-        <Content style={{ marginTop: 64 }}>
-          <Roulette />
+        <Content className="site-layout" style={{ marginTop: 50 }}>
+          <div className="site-layout-background" style={{ minHeight: 380 }}>
+            <Roulette />
+          </div>
         </Content>
       </Mobile>
 
