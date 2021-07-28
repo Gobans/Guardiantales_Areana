@@ -4,26 +4,26 @@ import reportWebVitals from "./reportWebVitals";
 import { Layout, Menu, Breadcrumb } from "antd";
 import "./index.css";
 import Roulette from "./components/Roulette";
-import App from "./App";
 import { PC, Mobile } from "../src/Info/MediaQuery";
 
 const { Header, Content, Footer } = Layout;
 
 ReactDOM.render(
   <React.StrictMode>
-    <Layout>
+    <Layout className="layout">
       <PC>
-        <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
-          <div className="logo" />
+        <Header style={{ zIndex: 1, width: "100%" }}>
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
-            <Menu.Item key="1">플리트비체의 신전</Menu.Item>
+            <Menu.Item style={{ backgroundColor: "#F60000" }} key="1">
+              플리트비체의 신전
+            </Menu.Item>
             {/* <Menu.Item key="2">nav 2</Menu.Item>
           <Menu.Item key="3">nav 3</Menu.Item> */}
           </Menu>
         </Header>
         <Content
           className="site-layout"
-          style={{ padding: "0 50px", marginTop: 64 }}
+          style={{ padding: "0 50px", marginTop: 20 }}
         >
           {/* <Breadcrumb style={{ margin: '16px 0' }}>
         <Breadcrumb.Item>Home</Breadcrumb.Item>
@@ -40,15 +40,17 @@ ReactDOM.render(
       </PC>
 
       <Mobile>
-        <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
-          <div className="logo" />
-          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
-            <Menu.Item key="1">플리트비체의 신전</Menu.Item>
+        <Header style={{ zIndex: 1, width: "100%" }}>
+          {/* <div className="logo" /> */}
+          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["0"]}>
+            <Menu.Item style={{ backgroundColor: "#F60000" }} key="0">
+              플리트비체의 신전
+            </Menu.Item>
             {/* <Menu.Item key="2">nav 2</Menu.Item>
           <Menu.Item key="3">nav 3</Menu.Item> */}
           </Menu>
         </Header>
-        <Content className="site-layout" style={{ marginTop: 50 }}>
+        <Content className="site-layout-content ">
           <div className="site-layout-background" style={{ minHeight: 380 }}>
             <Roulette />
           </div>
