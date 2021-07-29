@@ -39,25 +39,6 @@ const HeroSelectionMobile = (props) => {
           Undergraduate<List.Item.Brief>Auxiliary text</List.Item.Brief>
         </CheckboxItem>
       </List>
-
-      <Flex>
-        <Flex.Item>
-          <AgreeItem
-            data-seed="logId"
-            onChange={(e) => console.log("checkbox", e)}
-          >
-            Agree{" "}
-            <a
-              onClick={(e) => {
-                e.preventDefault();
-                alert("agree it");
-              }}
-            >
-              agreement
-            </a>
-          </AgreeItem>
-        </Flex.Item>
-      </Flex>
     </div>
   );
 };

@@ -133,7 +133,7 @@ function Roulette() {
           >
             <div>
               <img
-                src="img\pudding.png"
+                src="Guardiantales_Areana/img/pudding.png"
                 alt="pudding"
                 width="30px"
                 height="30px"
@@ -169,7 +169,7 @@ function Roulette() {
           >
             <div>
               <img
-                src="img\pudding.png"
+                src="Guardiantales_Areana/img/pudding.png"
                 alt="pudding"
                 width="30px"
                 height="30px"
