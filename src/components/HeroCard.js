@@ -4,7 +4,7 @@ import { Mobile, PC } from "../Info/MediaQuery";
 const HeroCard = (props) => {
   let { heroName } = props;
 
-  let imgSrc = `Guardiantales_Areana/img/${heroName}.png`;
+  let imgSrc = `img/${heroName}.png`;
 
   return (
     <>

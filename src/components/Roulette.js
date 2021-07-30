@@ -12,7 +12,7 @@ import HeroSelection from "./HeroSelection";
 import HeroSelectionMobile from "./HeroSelectionMobile";
 
 import HeroOption from "./HeroOption";
-import { heroesInfo } from "../Info/heroes";
+import { heroes } from "../Info/heroes";
 
 function shuffle(array) {
   var currentIndex = array.length,
@@ -35,8 +35,11 @@ function shuffle(array) {
 }
 let defaultIndex = [];
 
-for (let j = 0; j < Object.keys(heroesInfo).length; j++) {
+let heroesInfo = {};
+
+for (let j = 0; j < Object.keys(heroes).length; j++) {
   defaultIndex.push(`${j}`);
+  heroesInfo[j] = heroes[j];
 }
 
 let defaultOption = [
@@ -133,7 +136,7 @@ function Roulette() {
           >
             <div>
               <img
-                src="Guardiantales_Areana/img/pudding.png"
+                src="img/pudding.png"
                 alt="pudding"
                 width="30px"
                 height="30px"
@@ -169,7 +172,7 @@ function Roulette() {
           >
             <div>
               <img
-                src="Guardiantales_Areana/img/pudding.png"
+                src="img/pudding.png"
                 alt="pudding"
                 width="30px"
                 height="30px"
