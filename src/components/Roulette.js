@@ -14,6 +14,8 @@ import HeroSelectionMobile from "./HeroSelectionMobile";
 import HeroOption from "./HeroOption";
 import { heroes } from "../Info/heroes";
 
+import PlitviceMotion from "./PlitviceMotion";
+
 function shuffle(array) {
   var currentIndex = array.length,
     randomIndex;
@@ -62,9 +64,11 @@ function Roulette() {
   const [card2, setCard2] = useState(0);
   const [card3, setCard3] = useState(20);
 
+  const [plitviceAni, setPlitviceAni] = useState(false);
+  const plitRef = useRef(null);
+
   const randomChange = () => {
     let array = [];
-    console.log(option);
 
     let options = {
       "3성": false,
@@ -82,8 +86,6 @@ function Roulette() {
       options[option[j]] = true;
     }
 
-    console.log(options);
-
     for (let i = 0; i < availableIndex.length; i++) {
       if (
         options[heroesInfo[parseInt(availableIndex[i])].star] &&
@@ -91,10 +93,7 @@ function Roulette() {
       ) {
         array.push(parseInt(availableIndex[i]));
       }
-      console.log(availableIndex[i]);
     }
-
-    console.log(array);
 
     if (array.length < 3) {
       while (array.length < 3) {
@@ -103,7 +102,6 @@ function Roulette() {
     }
 
     array = shuffle(array);
-    console.log(array);
 
     setTimeout(() => setCard1(array[0]), 1000);
     setTimeout(() => setCard2(array[1]), 2000);
@@ -113,6 +111,11 @@ function Roulette() {
   return (
     <>
       <PC>
+        <PlitviceMotion
+          plitviceAni={plitviceAni}
+          setPlitviceAni={setPlitviceAni}
+          ref={plitRef}
+        />
         <Divider orientation="center">여신의 신탁</Divider>
         <Row justify="center">
           <Col span={5}>
@@ -132,6 +135,7 @@ function Roulette() {
           <Button
             onClick={() => {
               randomChange();
+              plitRef.current.AnimateDance();
             }}
           >
             <div>
