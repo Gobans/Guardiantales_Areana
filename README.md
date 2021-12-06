@@ -7,7 +7,7 @@ https://gobans.github.io/Guardiantales_Areana/
 <br/>
 
 
-# About the Project
+# About the Project :art:
 
 ![메인화면](https://user-images.githubusercontent.com/56781342/144855574-1e8c0f9a-9640-4bc0-92c9-5c1fcc4276ce.PNG)
 
@@ -17,7 +17,7 @@ https://gobans.github.io/Guardiantales_Areana/
 
 <br/>
 
-# Development Stack :construction_worker: :wrench: :hammer:
+# Development Stack :hammer:
 ![GitHub message](https://img.shields.io/badge/STACK-FRONT-lightgrey?style=for-the-badge)
 >![npm type definitions](https://img.shields.io/badge/Front--end-javascript-yellow?style=flat-square&logo=JAVAscript)
 ![npm type definitions](https://img.shields.io/badge/Front--end-react-blue?style=flat-square&logo=react)
