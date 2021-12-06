@@ -25,4 +25,7 @@ https://gobans.github.io/Guardiantales_Areana/
 <br/>
 
 # MIT
+
+![GitHub message](https://img.shields.io/apm/l/vim-mode)
+
 Distributed under the MIT License. See `LICENSE.txt` for more information.
