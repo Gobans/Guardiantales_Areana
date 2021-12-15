@@ -19,8 +19,8 @@ https://gobans.github.io/Guardiantales_Areana/
 
 # Development Stack :hammer:
 ![GitHub message](https://img.shields.io/badge/STACK-FRONT-lightgrey?style=for-the-badge)
->![npm type definitions](https://img.shields.io/badge/Front--end-javascript-yellow?style=flat-square&logo=JAVAscript)
-![npm type definitions](https://img.shields.io/badge/Front--end-react-blue?style=flat-square&logo=react)
+>![npm type definitions](https://img.shields.io/badge/javascript-yellow?style=flat-square&logo=JAVAscript)
+![npm type definitions](https://img.shields.io/badge/react-blue?style=flat-square&logo=react)
 
 <br/>
 
