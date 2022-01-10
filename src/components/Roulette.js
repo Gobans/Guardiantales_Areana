@@ -1,15 +1,12 @@
-import React, { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { Row, Col, Divider, Button } from "antd";
-import { Flex, WhiteSpace } from "antd-mobile";
 
 import "./roulette.css";
 import { Mobile, PC } from "../Info/MediaQuery";
 
 import HeroCard from "./HeroCard";
-import HeroCardMobile from "./HeroCardMobile";
 
 import HeroSelection from "./HeroSelection";
-import HeroSelectionMobile from "./HeroSelectionMobile";
 
 import HeroOption from "./HeroOption";
 import { heroes } from "../Info/heroes";
@@ -153,6 +150,11 @@ function Roulette() {
       </PC>
 
       <Mobile>
+      <PlitviceMotion
+          plitviceAni={plitviceAni}
+          setPlitviceAni={setPlitviceAni}
+          ref={plitRef}
+        />
         <Divider orientation="vertical">여신의 신탁</Divider>
         <Row justify="center">
           <Col span={8}>
@@ -172,6 +174,7 @@ function Roulette() {
           <Button
             onClick={() => {
               randomChange();
+              plitRef.current.AnimateDance();
             }}
           >
             <div>

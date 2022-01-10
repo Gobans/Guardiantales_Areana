@@ -32,6 +32,7 @@ export const heroes = [
   { name: "수유즈", star: "3성", element: "수속성" },
   { name: "엘레노아", star: "3성", element: "광속성" },
   { name: "신틸라", star: "3성", element: "화속성" },
+  //----------------------3성-----------------------
   { name: "기사", star: "2성", element: "무속성" },
   { name: "에바", star: "2성", element: "광속성" },
   { name: "엘비라", star: "2성", element: "화속성" },
@@ -59,6 +60,7 @@ export const heroes = [
   { name: "에이미", star: "2성", element: "무속성" },
   { name: "기르가스", star: "2성", element: "화속성" },
   { name: "캐서린", star: "2성", element: "수속성" },
+    //----------------------2성-----------------------
   { name: "리에", star: "2성", element: "무속성" },
   { name: "네바", star: "2성", element: "광속성" },
   { name: "린다", star: "1성", element: "무속성" },
@@ -83,6 +85,7 @@ export const heroes = [
   { name: "리오", star: "1성", element: "지속성" },
   { name: "나이언", star: "1성", element: "무속성" },
   { name: "마티 주니어", star: "1성", element: "지속성" },
+    //----------------------1성-----------------------
   { name: "none", star: "none", element: "none" },
 ];
 
@@ -120,6 +123,7 @@ export const heroesName = [
   "수유즈",
   "엘레노아",
   "신틸라",
+    //----------------------3성-----------------------
   "기사",
   "에바",
   "엘비라",
@@ -149,6 +153,7 @@ export const heroesName = [
   "캐서린",
   "리에",
   "네바",
+    //----------------------2성-----------------------
   "린다",
   "밥",
   "하이퍼",

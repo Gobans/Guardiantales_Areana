@@ -1,36 +1,57 @@
 import "./Main.css";
-import { Layout, Menu, Breadcrumb } from "antd";
+import { Layout, Menu} from "antd";
+import Roulette from "../components/Roulette";
+import { PC, Mobile } from "../../src/Info/MediaQuery";
+
 const { Header, Content, Footer } = Layout;
 
 function Main() {
   return (
-    <Layout>
-      <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
-        <div className="logo" />
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
-          <Menu.Item key="1">여신의 신탁</Menu.Item>
-          {/* <Menu.Item key="2">nav 2</Menu.Item>
-        <Menu.Item key="3">nav 3</Menu.Item> */}
-        </Menu>
-      </Header>
-      <Content
-        className="site-layout"
-        style={{ padding: "0 50px", marginTop: 64 }}
-      >
-        {/* <Breadcrumb style={{ margin: '16px 0' }}>
-        <Breadcrumb.Item>Home</Breadcrumb.Item>
-        <Breadcrumb.Item>List</Breadcrumb.Item>
-        <Breadcrumb.Item>App</Breadcrumb.Item>
-      </Breadcrumb> */}
-        <div
-          className="site-layout-background"
-          style={{ padding: 24, minHeight: 380 }}
+    <Layout className="layout">
+      <PC>
+        <Header style={{ zIndex: 1, width: "100%" }}>
+          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
+            <Menu.Item style={{ backgroundColor: "#F60000" }} key="1">
+              플리트비체의 신전
+            </Menu.Item>
+            <Menu.Item style={{ backgroundColor: "#4AA8D8" }} key="2">
+              플리트비체의 콜로세움
+            </Menu.Item>
+          </Menu>
+        </Header>
+        <Content
+          className="site-layout"
+          style={{ padding: "0 50px", marginTop: 20 }}
         >
-          Content
-        </div>
-      </Content>
+          <div
+            className="site-layout-background"
+            style={{ padding: 24, minHeight: 380 }}
+          >
+            <Roulette />
+          </div>
+        </Content>
+      </PC>
+
+      <Mobile>
+        <Header style={{ zIndex: 1, width: "100%" }}>
+          {/* <div className="logo" /> */}
+          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["0"]}>
+            <Menu.Item style={{ backgroundColor: "#F60000" }} key="0">
+              플리트비체의 신전
+            </Menu.Item>
+            {/* <Menu.Item key="2">nav 2</Menu.Item>
+          <Menu.Item key="3">nav 3</Menu.Item> */}
+          </Menu>
+        </Header>
+        <Content className="site-layout-content ">
+          <div className="site-layout-background" style={{ minHeight: 380 }}>
+            <Roulette />
+          </div>
+        </Content>
+      </Mobile>
+
       <Footer style={{ textAlign: "center" }}>
-        Ant Design ©2018 Created by Ant UED
+        문의&건의: thznfl44@naver.com
       </Footer>
     </Layout>
   );

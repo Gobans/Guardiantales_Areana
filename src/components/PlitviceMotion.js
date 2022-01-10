@@ -1,4 +1,4 @@
-import React, { useImperativeHandle, useState, forwardRef } from "react";
+import { useImperativeHandle, useState, forwardRef } from "react";
 import { Mobile, PC } from "../Info/MediaQuery";
 
 const PlitviceMotion = forwardRef((props, ref) => {
@@ -35,9 +35,9 @@ const PlitviceMotion = forwardRef((props, ref) => {
         <img
           alt="플비"
           style={{
-            position: "absolute",
-            left: "1200px",
-            top: "450px",
+            position: "relative",
+            left: "55%",
+            top: "420px",
             transform: `scaleX(${dynamicTransForm})`,
           }}
           width="100"
@@ -45,7 +45,21 @@ const PlitviceMotion = forwardRef((props, ref) => {
           src={dynamicSrc}
         />
       </PC>
-      <Mobile></Mobile>
+      <Mobile>
+      <img
+          alt="플비"
+          style={{
+            position: "relative",
+            left: "60%",
+            top: "330px",
+            transform: `scaleX(${dynamicTransForm})`,
+          }}
+          width="100"
+          height="100"
+          src={dynamicSrc}
+        />
+
+      </Mobile>
     </>
   );
 });
