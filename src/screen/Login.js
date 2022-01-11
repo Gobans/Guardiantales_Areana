@@ -1,7 +1,8 @@
-import "./Main.css";
-import { Layout, Menu} from "antd";
-import Roulette from "../components/Roulette";
-import { PC, Mobile } from "../../src/Info/MediaQuery";
+import "./Login.css";
+import { Layout, Menu, Row} from "antd";
+import LoginForm from "../components/LoginForm"
+import { PC, Mobile } from "../Info/MediaQuery";
+import {Link} from "react-router-dom";
 
 const { Header, Content, Footer } = Layout;
 
@@ -10,12 +11,16 @@ function Main() {
     <Layout className="layout">
       <PC>
         <Header style={{ zIndex: 1, width: "100%" }}>
-          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
-            <Menu.Item style={{ backgroundColor: "#F60000" }} key="1">
-              플리트비체의 신전
-            </Menu.Item>
-            <Menu.Item style={{ backgroundColor: "#4AA8D8" }} key="2">
+          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
+            <Menu.Item style={{ backgroundColor: "#4AA8D8" }} key="1">
+              <Link to="/">
               플리트비체의 콜로세움
+              </Link>
+            </Menu.Item>
+            <Menu.Item style={{ backgroundColor: "#F60000" }} key="2">
+            <Link to="/temple">
+              플리트비체의 신전
+              </Link>
             </Menu.Item>
           </Menu>
         </Header>
@@ -25,13 +30,15 @@ function Main() {
         >
           <div
             className="site-layout-background"
-            style={{ padding: 24, minHeight: 380 }}
+            style={{ padding: 24, minHeight: 380,textAlign:"center"}}
           >
-            <Roulette />
+              <p>로그인</p>
+            <Row type="flex" justify="center" align="middle" style={{minHeight: '30vh',}}>
+              <LoginForm/>
+            </Row>
           </div>
         </Content>
       </PC>
-
       <Mobile>
         <Header style={{ zIndex: 1, width: "100%" }}>
           {/* <div className="logo" /> */}
@@ -44,12 +51,11 @@ function Main() {
           </Menu>
         </Header>
         <Content className="site-layout-content ">
-          <div className="site-layout-background" style={{ minHeight: 380 }}>
-            <Roulette />
+          <div className="site-layout-background" style={{ minHeight: 380,  }}>
+            contents
           </div>
         </Content>
       </Mobile>
-
       <Footer style={{ textAlign: "center" }}>
         문의&건의: thznfl44@naver.com
       </Footer>

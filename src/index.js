@@ -1,11 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
-import Main from "./screen/Main"
+import Temple from "./screen/Temple"
+import Matching from "./screen/Matching"
+import Login from "./screen/Login"
+import { BrowserRouter,Route,Routes } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Main/>
+  <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Matching/>} />
+        <Route exact path="temple" element={<Temple/>} />
+        <Route exact path="login" element={<Login/>} />
+      </Routes>
+  </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
